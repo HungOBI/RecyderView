@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    app:cardElevation="7dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/image_view_food"
+            android:layout_width="120dp"
+            app:layout_constraintDimensionRatio="300:200"
+            android:layout_height="0dp"
+            tools:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_view_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/text_view_title_close_time"
+            android:textColor="#ffff"
+            android:textAlignment="center"
+            android:gravity="center"
+            tools:text="Đóng cửa \n Đặt bàn vào lúc 12h:30"
+            android:background="#CC000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="120dp"
+            app:layout_constraintDimensionRatio="300:200"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:textColor="#383838"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_food"
+            app:layout_constraintBottom_toTopOf="@id/text_view_address"
+            android:id="@+id/text_view_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="250dp"
+            tools:text="Anrakutei - Nhà Hàng Thịt Nướng"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:textColor="#A1A0A0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name"
+            app:layout_constraintStart_toEndOf="@id/image_view_food"
+            app:layout_constraintBottom_toTopOf="@id/text_view_category"
+            android:id="@+id/text_view_address"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:maxWidth="250dp"
+            android:maxLines="1"
+            tools:text="59 Mạc Đĩnh Chi, P.Đa Kao, Quận 1, TP. HCM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:textColor="#131313"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_address"
+            app:layout_constraintStart_toEndOf="@id/image_view_food"
+            app:layout_constraintBottom_toTopOf="@id/text_view_sale_off"
+            app:layout_constraintHorizontal_bias="0"
+            android:id="@+id/text_view_category"
+            android:textSize="12dp"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:maxLines="1"
+            tools:text="Nhà Hàng - Sinh nhật"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:textColor="#131313"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_category"
+            app:layout_constraintStart_toEndOf="@id/image_view_food"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/text_view_sale_off"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Cả ngày - giảm 20%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableLeftCompat="@drawable/img" />
+
+        <TextView
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintVertical_bias="0.8"
+            android:textAlignment="center"
+            android:textColor="#A1A0A0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/text_view_distance"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:maxLines="1"
+            tools:text=">13.1km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
